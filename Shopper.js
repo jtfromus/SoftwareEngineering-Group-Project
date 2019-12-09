@@ -1,7 +1,8 @@
 class Shopper{
 
-    constructor(cart) {
+    constructor(cart, id) {
       this.cart= new Array();
+      this.id = id;
     }
     addItem(item){
       this.cart.push(item);
