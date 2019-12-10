@@ -16,7 +16,7 @@ class Shopper{
     }
     displayCart(){
       
-      var str = "";
+      var str = "Test/n";
 
       this.cart.forEach(element => {
         str += element + ", " ;
