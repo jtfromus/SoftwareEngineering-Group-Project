@@ -1,8 +1,8 @@
 class Shopper{
 
-    constructor(cart, id) {
+    constructor(cart, name){
       this.cart= new Array();
-      this.id = id;
+      this.name = name;
     }
     addItem(item){
       this.cart.push(item);
@@ -14,21 +14,41 @@ class Shopper{
         this.cart.splice(index, 1);
       }
     }
+    displayCart(){
+      
+      var str = "";
+
+      this.cart.forEach(element => {
+        str += element + ", " ;
+
+      });
+
+      var new_str = str.slice(0, -2);
+      /*
+      //TEST CASE
+
+      console.log("Before: " + str);
+
+      console.log("After: " + new_str);
+      */
+     console.log(new_str);
+  
   }
+}
   
   
   //TEST CASE
-  /*
- 
+  
+ /*
   var cart = [];
   
-  var customer = new Shopper(cart)
+  var customer = new Shopper(cart, "Bob Builder");
   
   customer.addItem("Squash");
   customer.addItem("Chicken");
   customer.addItem("Milk");
   
-  customer.deleteItem("Chicken");
+  //customer.deleteItem("Chicken");
   
-  console.log(customer);
+  console.log(customer.displayCart());
   */
