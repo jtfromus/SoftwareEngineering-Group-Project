@@ -4,6 +4,7 @@ class Shopper{
       var cart= new Array();
       this.name = name;
     }
+
     addItem(item){
       this.cart.push(item);
     }
@@ -14,6 +15,7 @@ class Shopper{
         this.cart.splice(index, 1);
       }
     }
+
     displayCart(){
       
       var str = "Test/n";
@@ -34,6 +36,11 @@ class Shopper{
      console.log(new_str);
   
   }
+  
+  setName(name){this.name = name;}
+
+  getName(){return this.name;}
+  
 }
   
   
