@@ -7,10 +7,11 @@
     Inventory
 </h1>
 <body style="background-color:#ff6666">
+        <script src="./Shopper.js"></script>
         <figure>
             <img src="./images/chicken.jpg" width="100" height="100" >
             <figcaption>Chicken - $10.99 + tax</figcaption>
-            <button class="button button4">Add to cart</button>
+            <button class="button button4" onclick="addToCart()">Add to cart</button>
         </figure>
         <figure>
             <img src="./images/steak.jpg" width="100" height="100">
@@ -67,7 +68,8 @@
             <figcaption>Kiwi - $.10 + tax</figcaption>
             <button class="button button4">Add to cart</button>
         </figure>
-        <input type="button" value="View cart" style="position: absolute; top: 8px; right: 16px; font-size: 18px;">
+        <input type="button" value="View cart" onclick="javascript:window.location.href='./ViewCart.html'" style="position: absolute; top: 8px; right: 16px; font-size: 18px;">
+        
 </body>
 
 </html>
