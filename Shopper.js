@@ -1,7 +1,7 @@
 class Shopper{
 
-    constructor(cart, name){
-      this.cart= new Array();
+    constructor(name){
+      var cart= new Array();
       this.name = name;
     }
     addItem(item){
