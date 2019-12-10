@@ -25,6 +25,35 @@
         <script>
         Shopper.displayCart();
         </script>
+        <table cellpadding="5" cellspacing="5" border="1">
+            <tr>
+                <td valign="top">
+                    <table cellpadding="5" cellspacing="5" border="1">
+                        <thread>
+                            <tr>
+                                <td>
+                                    Name
+                                </td>
+                                <td>
+                                    Image
+                                </td>
+                                <td>
+                                    Price
+                                </td>
+                            </tr>
+                        </thread>
+                        <tbody id="cartTable">
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="3" align="right" id="totalPrice">
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </td>
+            </tr>
+        </table>
 
     <!-- Button to return to Shop-->
     <input type="button" value="Back to Shop" onclick="javascript:window.location.href='./Shop.html'" style="position: absolute; top: 8px; right: 16px; font-size: 18px;">
