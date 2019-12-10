@@ -17,29 +17,42 @@ class Shopper{
     }
 
     displayCart(){
-      
-      var str = "Test/n";
+      //get the table from HTML
+      var cartTable = document.getElementById("cartTable");
+      //Delete any row if there exists one
+      while(cartTable.rows.length>0){
+        cartTable.deletRow(0);
+      }
 
-      this.cart.forEach(element => {
-        str += element + ", " ;
+      //Total Price
+      var totalPrice = 0;
 
-      });
 
-      var new_str = str.slice(0, -2);
-      /*
-      //TEST CASE
+      for(var product in cart){
+        //add a row
+        var row = cartTable.insertRow();
 
-      console.log("Before: " + str);
+        //linking cells
+        var productName = row.insertCell(0);
+        var productPic = row.insertCell(1);
+        var productPrice = row.insertCell(2);
 
-      console.log("After: " + new_str);
-      */
-     console.log(new_str);
-  
+        //adding info to the cells
+        productName.innerHTML = cart[product].name;
+        productPic.innerHTML = cart[product].image;
+        productPrice.innerHTML = cart[product].price;
+        
+        //adding to total price
+        totalPrice += cart[product].price;
+      }
+
+      //displaying total Price
+      document.getElementById("totalPrice").innerHTML=totalPrice;
   }
   
-  setName(name){this.name = name;}
+  set name(name){this.name = name;}
 
-  getName(){return this.name;}
+  get name(){return this.name;}
   
 }
   
