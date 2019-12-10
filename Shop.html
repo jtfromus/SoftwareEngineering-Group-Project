@@ -45,6 +45,15 @@
         Inventory
     </h1>
 <body>
+    <script type="text/javascript" src="InventoryDatabase.js">createDatabase();</script>
+    <?php
+    $conn = con_connect("localhost", "", "", "storeDatabase");
+    if($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    $query = "SELECT itemNumber FROM storeDatabase";
+    $result = $conn->query($query);
+    ?>
         <!-- ROW 1 -->
         <div class="row1">
         <!-- CHICKEN -->
